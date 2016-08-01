@@ -39,6 +39,7 @@ namespace triton {
       ARCH_INVALID = 0, /*!< invalid architecture. */
       ARCH_X86,         /*!< x86 architecture. */
       ARCH_X86_64,      /*!< x86_64 architecture. */
+      ARCH_ARM64,      /*!< arm64 architecture. */
       ARCH_LAST_ITEM    /*!< must be the last item.  */
     };
 

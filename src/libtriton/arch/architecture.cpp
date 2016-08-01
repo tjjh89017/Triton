@@ -68,6 +68,16 @@ namespace triton {
             throw triton::exceptions::Architecture("Architecture::setArchitecture(): Not enough memory.");
           this->cpu->init();
           break;
+
+        case triton::arch::ARCH_ARM64:
+          /* remove previous CPU instance (when setArchitecture() has been called twice) */
+          delete this->cpu;
+          /* init the new instance */
+          this->cpu = new triton::arch::arm64::arm64Cpu();
+          if (!this->cpu)
+            throw triton::exceptions::Architecture("Architecture::setArchitecture(): Not enough memory.");
+          this->cpu->init();
+          break;
       }
     }
 
