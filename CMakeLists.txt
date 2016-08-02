@@ -170,8 +170,10 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux" OR ${CMAKE_SYSTEM_NAME} MATCHES "Darwin"
     # Triton have to generate a syscalls table from the kernel source
     # This following code tries to find the unistd_64.h or unistd_32.h header depending on the architecture.
     if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
-        FILE(GLOB_RECURSE syscalls32_table_files /usr/include/*unistd_32.h)
-        FILE(GLOB_RECURSE syscalls64_table_files /usr/include/*unistd_64.h)
+        # FILE(GLOB_RECURSE syscalls32_table_files /usr/include/*unistd_32.h)
+        FILE(GLOB_RECURSE syscalls32_table_files /usr/include/*unistd32.h)
+        # FILE(GLOB_RECURSE syscalls64_table_files /usr/include/*unistd_64.h)
+        FILE(GLOB_RECURSE syscalls64_table_files /usr/include/*unistd.h)
     endif()
 
     if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")

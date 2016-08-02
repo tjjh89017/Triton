@@ -45,7 +45,37 @@ namespace triton {
 
       void arm64Cpu::copy(const arm64Cpu& other) {
         this->memory = other.memory;
-        memcpy(this->rax,     other.rax,    sizeof(this->rax));
+        memcpy(this->x0,       other.x0,     sizeof(this->x1));
+        memcpy(this->x1,       other.x1,     sizeof(this->x1));
+        memcpy(this->x2,       other.x2,     sizeof(this->x2));
+        memcpy(this->x3,       other.x3,     sizeof(this->x3));
+        memcpy(this->x4,       other.x4,     sizeof(this->x4));
+        memcpy(this->x5,       other.x5,     sizeof(this->x5));
+        memcpy(this->x6,       other.x6,     sizeof(this->x6));
+        memcpy(this->x7,       other.x7,     sizeof(this->x7));
+        memcpy(this->x8,       other.x8,     sizeof(this->x8));
+        memcpy(this->x9,       other.x9,     sizeof(this->x9));
+        memcpy(this->x10,      other.x10,    sizeof(this->x10));
+        memcpy(this->x11,      other.x11,    sizeof(this->x11));
+        memcpy(this->x12,      other.x12,    sizeof(this->x12));
+        memcpy(this->x13,      other.x13,    sizeof(this->x13));
+        memcpy(this->x14,      other.x14,    sizeof(this->x14));
+        memcpy(this->x15,      other.x15,    sizeof(this->x15));
+        memcpy(this->x16,      other.x16,    sizeof(this->x16));
+        memcpy(this->x17,      other.x17,    sizeof(this->x17));
+        memcpy(this->x18,      other.x18,    sizeof(this->x18));
+        memcpy(this->x19,      other.x19,    sizeof(this->x19));
+        memcpy(this->x20,      other.x20,    sizeof(this->x20));
+        memcpy(this->x21,      other.x21,    sizeof(this->x21));
+        memcpy(this->x22,      other.x22,    sizeof(this->x22));
+        memcpy(this->x23,      other.x23,    sizeof(this->x23));
+        memcpy(this->x24,      other.x24,    sizeof(this->x24));
+        memcpy(this->x25,      other.x25,    sizeof(this->x25));
+        memcpy(this->x26,      other.x26,    sizeof(this->x26));
+        memcpy(this->x27,      other.x27,    sizeof(this->x27));
+        memcpy(this->x28,      other.x28,    sizeof(this->x28));
+        memcpy(this->x29,      other.x29,    sizeof(this->x29));
+        memcpy(this->x30,      other.x30,    sizeof(this->x30));
       }
 
 
@@ -71,7 +101,37 @@ namespace triton {
         this->memory.clear();
 
         /* Clear registers */
-        memset(this->rax,     0x00, sizeof(this->rax));
+        memset(this->x0,       0,     sizeof(this->x1));
+        memset(this->x1,       0,     sizeof(this->x1));
+        memset(this->x2,       0,     sizeof(this->x2));
+        memset(this->x3,       0,     sizeof(this->x3));
+        memset(this->x4,       0,     sizeof(this->x4));
+        memset(this->x5,       0,     sizeof(this->x5));
+        memset(this->x6,       0,     sizeof(this->x6));
+        memset(this->x7,       0,     sizeof(this->x7));
+        memset(this->x8,       0,     sizeof(this->x8));
+        memset(this->x9,       0,     sizeof(this->x9));
+        memset(this->x10,      0,    sizeof(this->x10));
+        memset(this->x11,      0,    sizeof(this->x11));
+        memset(this->x12,      0,    sizeof(this->x12));
+        memset(this->x13,      0,    sizeof(this->x13));
+        memset(this->x14,      0,    sizeof(this->x14));
+        memset(this->x15,      0,    sizeof(this->x15));
+        memset(this->x16,      0,    sizeof(this->x16));
+        memset(this->x17,      0,    sizeof(this->x17));
+        memset(this->x18,      0,    sizeof(this->x18));
+        memset(this->x19,      0,    sizeof(this->x19));
+        memset(this->x20,      0,    sizeof(this->x20));
+        memset(this->x21,      0,    sizeof(this->x21));
+        memset(this->x22,      0,    sizeof(this->x22));
+        memset(this->x23,      0,    sizeof(this->x23));
+        memset(this->x24,      0,    sizeof(this->x24));
+        memset(this->x25,      0,    sizeof(this->x25));
+        memset(this->x26,      0,    sizeof(this->x26));
+        memset(this->x27,      0,    sizeof(this->x27));
+        memset(this->x28,      0,    sizeof(this->x28));
+        memset(this->x29,      0,    sizeof(this->x29));
+        memset(this->x30,      0,    sizeof(this->x30));
       }
 
 
